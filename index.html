@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="the coding for kids website">
+    <meta name="author" content="1CS6 G1">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/preset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Website Icon -->
+    <link rel="shortcut icon" href="./assets/logo_white.png" type="image/x-icon">
+    <!-- Website Name -->
+    <title>Coding For Kids</title>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="assets/logo_white.png" alt="logo">
+            </div>
+            <div class="nav">
+                <div class="icon" onclick="toggleNav()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul>
+                    <li><a href="#"  onclick="selectLink(this)" class="selected">Accueil</a></li>
+                    <li><a href="#a-propos" onclick="selectLink(this)" >A Propos</a></li>
+                    <li><a href="#programme" onclick="selectLink(this)">Programme</a></li>
+                    <li><a href="#formateur" onclick="selectLink(this)">Formateur</a></li>
+                    <li><a href="#galerie" onclick="selectLink(this)">Galerie</a></li>
+                    <li><a href="#faq" onclick="selectLink(this)" >FAQ</a></li>
+                    <li><a href="#contact" onclick="selectLink(this)">Contact</a></li>
+                </ul>
+            </div>
+            <div class="call-to-action-1">
+                S'inscrire
+            </div>
+        </div>
+    </header>
+
+
+    <div class="hero-section">
+        <div class="call-to-action-2">
+            S'inscrire
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div id="a-propos">
+            <div class="text">
+                <div class="title">
+                    <h2>À Propos de l'Évenement</h2>
+                </div>
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur. Libero ac adipiscing ipsum id bibendum dolor pharetra malesuada. Sagittis aliquam augue facilisi eget sagittis. Nunc mauris scelerisque erat a. Mi tellus condimentum auctor tempus. Cras vitae venenatis vivamus viverra massa.
+                </div>
+            </div>
+            <div class="img">
+                <img src="./assets/scratch_computer 1.png" alt="scratch-computer">
+            </div>
+        </div>
+        <div id="programme">
+            <div class="title">
+                <div class="title-name">
+                    <h2>Event Program</h2>
+                </div>
+                <img src="./assets/cloud.png" alt="cloud group">
+                <img src="./assets/cloud.png" alt="cloud group">
+            </div>
+            <div class="content">
+                <img src="./assets/RoadMap.png" alt="Event road map">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectLink(link) {
+            // Remove the "selected" class from all links
+            var links = document.querySelectorAll('.nav ul li a');
+            links.forEach(function (item) {
+                item.classList.remove('selected');
+            });
+
+            // Add the "selected" class to the clicked link
+            link.classList.add('selected');
+        }
+        function toggleNav() {
+            var nav = document.querySelector('.nav ul');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
